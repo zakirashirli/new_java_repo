@@ -3,14 +3,30 @@ package exercises;
 public class MyToyShop {
     public static void main(String[] args) {
         MyProducts product1 = new MyProducts();
+        // product1 data
         product1.id = 1;
         product1.name = "car toy";
         product1.price = 4.99;
         product1.rating = 11; // 8/10
         product1.age_restriction = 3;
+
+        // product1 methods
         product1.product_info();
         product1.setAge_restriction(3);
         product1.evaluateRating();
+
+        MyProducts product2 = new MyProducts();
+        // product2 data
+        product2.id = 2;
+        product2.name = "Lego";
+        product2.price = 80.99;
+        product2.rating = 9; // 9/10
+        product2.age_restriction = 6;
+
+        // product2 methods
+        product2.product_info();
+        product2.setAge_restriction(16);
+        product2.evaluateRating();
     }
 }
 
@@ -29,6 +45,7 @@ class MyProducts {
         System.out.println("price: " + price);
         System.out.println("rating: " + rating);
         System.out.println("age_restriction: " + age_restriction);
+
     }
 
     void setAge_restriction(int child_age) {
@@ -47,5 +64,7 @@ class MyProducts {
         } else {
             System.out.println("Низкий Рейтинг!");
         }
+
+        System.out.println("-----------");
     }
 }
